@@ -1,0 +1,12 @@
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\obj\Debug\Assembly-CSharp.dll
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Pierre-Luc\Documents\GitHub\Unity-Game-learn\LaserDefender\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
