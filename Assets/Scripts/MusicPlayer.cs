@@ -17,7 +17,6 @@ public class MusicPlayer : MonoBehaviour
     if (instance != null && instance != this)
     {
       Destroy(gameObject);
-      print("Duplicate music player self-destructing!");
     }
     else
     {
@@ -32,7 +31,6 @@ public class MusicPlayer : MonoBehaviour
 
   void OnLevelWasLoaded(int level)
   {
-    Debug.Log("MusicPlayer: loaded level " + level);
     music.Stop();
 
     if (level == 0)

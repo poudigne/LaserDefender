@@ -58,10 +58,8 @@ public class PlayerController : MonoBehaviour
       sr.color = new Color(255, 255, 255, 0);
 
       invincibleTimeElapsed += Time.deltaTime;
-      Debug.Log("Invincible time : " + invincibleTimeElapsed);
       if (invincibleTimeElapsed > invincibleTime)
       {
-        Debug.Log("No more invincible!"); 
         sr.color = new Color(255, 255, 255, 255);
         isInvincible = false;
       }
