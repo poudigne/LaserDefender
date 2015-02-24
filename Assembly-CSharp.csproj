@@ -62,7 +62,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="HighscoreManager">
- <HintPath>C:/Users/Pierre-Luc/Documents/GitHub/LaserDefender/Assets/HighscoreManager.dll</HintPath>
+ <HintPath>C:/Users/Pierre-Luc/Documents/GitHub/LaserDefender/Assets/Scripts/DLLs/HighscoreManager.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

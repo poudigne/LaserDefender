@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
   private float xMin = 5;
   private bool isInvincible = false;
   private float invincibleTimeElapsed = 0;
+  private Animator animator;
 
   // Called first when the Game object is created into the scene
   void Start()
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
     float distance = transform.position.z - camera.transform.position.z;
     xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, distance)).x + padding;
     xMax = camera.ViewportToWorldPoint(new Vector3(1, 1, distance)).x - padding;
+    animator = GetComponent<Animator>();
   }
 
   // Update is called once per frame
@@ -54,13 +56,10 @@ public class PlayerController : MonoBehaviour
     }
     if (isInvincible)
     {
-      SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
-      sr.color = new Color(255, 255, 255, 0);
-
       invincibleTimeElapsed += Time.deltaTime;
       if (invincibleTimeElapsed > invincibleTime)
       {
-        sr.color = new Color(255, 255, 255, 255);
+        animator.SetBool("isInvincible", false);
         isInvincible = false;
       }
     }
@@ -87,6 +86,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("now invincible !");
         isInvincible = true;
         invincibleTimeElapsed = 0;
+        animator.SetBool("isInvincible", true);
         NotifyHealthChange();
       }
     }
