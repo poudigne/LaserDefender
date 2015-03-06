@@ -24,11 +24,7 @@ public class PlayerController : MonoBehaviour
   // Called first when the Game object is created into the scene
   void Start()
   {
-    Camera camera = Camera.main;
-    float distance = transform.position.z - camera.transform.position.z;
-    xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, distance)).x + padding;
-    xMax = camera.ViewportToWorldPoint(new Vector3(1, 1, distance)).x - padding;
-    animator = GetComponent<Animator>();
+    
   }
 
   // Update is called once per frame
@@ -91,6 +87,16 @@ public class PlayerController : MonoBehaviour
       }
     }
   }
+
+  void OnGUI()
+  {
+    Camera camera = Camera.main;
+    float distance = transform.position.z - camera.transform.position.z;
+    xMin = camera.ViewportToWorldPoint(new Vector3(0, 0, distance)).x + padding;
+    xMax = camera.ViewportToWorldPoint(new Vector3(1, 1, distance)).x - padding;
+    animator = GetComponent<Animator>();
+  }
+
   bool IsShooting()
   {
     return Input.GetKeyDown(KeyCode.Space);
@@ -113,7 +119,7 @@ public class PlayerController : MonoBehaviour
   void FireLaser()
   {
     GameObject beam = Instantiate(missilePrefab, transform.position, Quaternion.identity) as GameObject;
-    beam.rigidbody2D.velocity = new Vector2(0, beamSpeed);
+    beam.GetComponent<Rigidbody2D>().velocity = new Vector2(0, beamSpeed);
     AudioSource.PlayClipAtPoint(laserSFX, transform.position);
   }
 

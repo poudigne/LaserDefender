@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
   void Fire()
   {
     GameObject missile = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-    missile.rigidbody2D.velocity = new Vector2(0, -missileSpeed);
+    missile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -missileSpeed);
     AudioSource.PlayClipAtPoint(laserSFX, transform.position);
   }
   void OnTriggerEnter2D(Collider2D collider)
