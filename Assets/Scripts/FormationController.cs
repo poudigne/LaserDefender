@@ -15,11 +15,7 @@ public class FormationController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    Camera camera = Camera.main;
-    float distance = transform.position.z - camera.transform.position.z;
-    boundaryLeftEdge = camera.ViewportToWorldPoint(new Vector3(0, 0, distance)).x - padding;
-    boundaryRightEdge = camera.ViewportToWorldPoint(new Vector3(1, 1, distance)).x + padding;
-    SpawnUntilFull();
+  
 	}
 	
 	// Update is called once per frame
@@ -54,6 +50,15 @@ public class FormationController : MonoBehaviour {
     Gizmos.DrawLine(new Vector3(xMin, yMax, 0), new Vector3(xMax, yMax));
     Gizmos.DrawLine(new Vector3(xMax, yMax, 0), new Vector3(xMax, yMin));
     Gizmos.DrawLine(new Vector3(xMax, yMin, 0), new Vector3(xMin, yMin));
+  }
+
+  void OnGUI()
+  {
+    Camera camera = Camera.main;
+    float distance = transform.position.z - camera.transform.position.z;
+    boundaryLeftEdge = camera.ViewportToWorldPoint(new Vector3(0, 0, distance)).x - padding;
+    boundaryRightEdge = camera.ViewportToWorldPoint(new Vector3(1, 1, distance)).x + padding;
+    SpawnUntilFull();
   }
 
   void SpawnUntilFull()
